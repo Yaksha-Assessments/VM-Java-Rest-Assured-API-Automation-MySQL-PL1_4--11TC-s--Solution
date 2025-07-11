@@ -1,0 +1,175 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>11/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Jul 11 00:57:36 IST 2025</td>
+</tr>
+<tr><td>Total time:</td><td>55 seconds (55398 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td>PL1 </td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testcases.RestAssured_TestCases.PutEmpName()'><b>PutEmpName</b><br>Test class: testcases.RestAssured_TestCases<br>Test method: Precondition: Retrieve the pay grade ID using getPayGradeid()
+1. Construct the endpoint '/web/index.php/api/v2/admin/pay-grades/{id}' dynamically using the retrieved ID
+2. Create a JSON request body with name as 'abcde'
+3. Send a PUT request with the constructed endpoint, valid cookie, and request body
+4. Print the response status code and body for verification
+5. Assert that the response status code is 200 (OK)</td>
+<td></td>
+<td>5</td>
+<td>testcases.RestAssured_TestCases@732d0d24</td></tr>
+<tr>
+<td title='testcases.RestAssured_TestCases.DeleteEmp()'><b>DeleteEmp</b><br>Test class: testcases.RestAssured_TestCases<br>Test method: Precondition: Retrieve the employment status ID using getemploymentstatusid()
+1. Construct the request body with the retrieved ID in the format: {"ids": [id]}
+2. Send a DELETE request to the '/web/index.php/api/v2/admin/employment-statuses' endpoint with a valid cookie and the request body
+3. Print the request body, response status code, and response body for debugging
+4. Assert that the response status code is 200, indicating the request was successful</td>
+<td></td>
+<td>2</td>
+<td>testcases.RestAssured_TestCases@732d0d24</td></tr>
+<tr>
+<td title='testcases.RestAssured_TestCases.GetEmpActionSummary()'><b>GetEmpActionSummary</b><br>Test class: testcases.RestAssured_TestCases<br>Test method: 1. Send a GET request to the '/web/index.php/api/v2/dashboard/employees/action-summary' endpoint with a valid cookie
+2. Do not include any request body (null)
+3. Print the response status code and response body
+4. Assert that the response status code is 200 (OK)</td>
+<td></td>
+<td>3</td>
+<td>testcases.RestAssured_TestCases@732d0d24</td></tr>
+<tr>
+<td title='testcases.RestAssured_TestCases.GetEmpSubunit()'><b>GetEmpSubunit</b><br>Test class: testcases.RestAssured_TestCases<br>Test method: 1. Send a GET request to the '/web/index.php/api/v2/dashboard/employees/subunit' endpoint with a valid cookie
+2. Do not provide any request body (null)
+3. Print the response status code and response body for validation
+4. Assert that the response status code is 200 (OK)</td>
+<td></td>
+<td>1</td>
+<td>testcases.RestAssured_TestCases@732d0d24</td></tr>
+<tr>
+<td title='testcases.RestAssured_TestCases.PostEmpStatus()'><b>PostEmpStatus</b><br>Test class: testcases.RestAssured_TestCases<br>Test method: 1. Generate a unique employment status name using the current timestamp
+2. Create a JSON request body with the generated name
+3. Send a POST request to the '/web/index.php/api/v2/admin/employment-statuses' endpoint with a valid cookie and request body
+4. Print the request body, response status code, and response body for debugging
+5. Assert that the response status code is 200, indicating successful creation</td>
+<td></td>
+<td>2</td>
+<td>testcases.RestAssured_TestCases@732d0d24</td></tr>
+<tr>
+<td title='testcases.RestAssured_TestCases.GetEmpLeaveInfo()'><b>GetEmpLeaveInfo</b><br>Test class: testcases.RestAssured_TestCases<br>Test method: 1. Generate the current date dynamically in 'yyyy-MM-dd' format
+2. Send a GET request to the '/web/index.php/api/v2/dashboard/employees/leaves?date={current_date}' endpoint with a valid cookie
+3. Do not include any request body (null)
+4. Log the date used, response status code, and response body
+5. Assert that the response status code is 200 (OK)</td>
+<td></td>
+<td>1</td>
+<td>testcases.RestAssured_TestCases@732d0d24</td></tr>
+<tr>
+<td title='testcases.RestAssured_TestCases.PutEmpStatus()'><b>PutEmpStatus</b><br>Test class: testcases.RestAssured_TestCases<br>Test method: Precondition: Retrieve the employment status ID using getemploymentstatusid()
+1. Construct the endpoint '/web/index.php/api/v2/admin/employment-statuses/{id}' using the retrieved ID
+2. Create a JSON request body to update the employment status name to 'abcdef'
+3. Send a PUT request to the constructed endpoint with a valid cookie and the request body
+4. Print the request body, response status code, and response body for debugging
+5. Assert that the response status code is 200, indicating successful update</td>
+<td></td>
+<td>1</td>
+<td>testcases.RestAssured_TestCases@732d0d24</td></tr>
+<tr>
+<td title='testcases.RestAssured_TestCases.GetLogin()'><b>GetLogin</b><br>Test class: testcases.RestAssured_TestCases<br>Test method: 1. Send a GET request to the '/web/index.php/auth/login' endpoint with a valid cookie
+2. Do not pass any request body (null)
+3. Print and verify the response status code and response body
+4. Assert that the response status code is 200 (OK) and response is HTML page</td>
+<td></td>
+<td>3</td>
+<td>testcases.RestAssured_TestCases@732d0d24</td></tr>
+<tr>
+<td title='testcases.RestAssured_TestCases.GetDashboardShortcut()'><b>GetDashboardShortcut</b><br>Test class: testcases.RestAssured_TestCases<br>Test method: 1. Send a GET request to the '/web/index.php/api/v2/dashboard/shortcuts' endpoint with a valid cookie
+2. Do not provide any request body (null)
+3. Print the response status code and body for verification
+4. Assert that the response status code is 200 (OK)</td>
+<td></td>
+<td>1</td>
+<td>testcases.RestAssured_TestCases@732d0d24</td></tr>
+<tr>
+<td title='testcases.RestAssured_TestCases.PostEmpName()'><b>PostEmpName</b><br>Test class: testcases.RestAssured_TestCases<br>Test method: 1. Generate a unique job category name using a random UUID substring
+2. Create a JSON request body with the generated name
+3. Send a POST request to the '/web/index.php/api/v2/admin/job-categories' endpoint with a valid cookie and the request body
+4. Print the request body, response status code, and response body for debugging
+5. Assert that the response status code is 200, indicating successful creation of the job category</td>
+<td></td>
+<td>0</td>
+<td>testcases.RestAssured_TestCases@732d0d24</td></tr>
+<tr>
+<td title='testcases.RestAssured_TestCases.loginWithSeleniumAndGetCookie()'><b>loginWithSeleniumAndGetCookie</b><br>Test class: testcases.RestAssured_TestCases<br>Test method: 1. Login to the application using Selenium WebDriver
+2. Extract the cookie named 'orangehrm' after successful login
+3. Store the cookie value for subsequent API requests</td>
+<td></td>
+<td>24</td>
+<td>testcases.RestAssured_TestCases@732d0d24</td></tr>
+</table><p>
+</body>
+</html>
